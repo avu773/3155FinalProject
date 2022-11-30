@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs') %>
+
+    
+<div id ="NewTicket">
+    <h2>Get pass for NFGC Today!</h2>
+        <form id = "TicketForm" action='' >
+            <label for="Name" >Full name:</label><br>
+            <input id ="Name" type="text" required name = "Name"><br>
+            <label for="Email" >Email:</label><br>
+            <input id ="Email" type="text" required name = "Email"><br>
+            <label for="phoneNum" >phoneNum:</label><br>
+            <input id ="phoneNum" type="text" required name = "phoneNum"><br>
+       
+        
+            <label for="PickDate">Pick Date:</label><br>
+            <select id = "PickDate" name = "Date">
+                <option value="Jan 30th">Jan 30th - $10</option>
+                <option value = "Jan 31st">Jan 31st - $15</option>
+                <option value = "both">both - $20</option>
+            </select><br>
+        
+
+        <input type="submit" value="Submit">
+
+        </form>
+</div>
+
+    
+    <%- include('../partials/footer.ejs') %>

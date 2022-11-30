@@ -1,0 +1,57 @@
+<%- include('../partials/header.ejs') %>
+<% /* take value from Date as default for start and stop time*/ %>
+<script type="text/javascript">
+    $("#PickDate").keyup(function(){
+    update();
+});
+
+function update() {
+  var a = $('#PickDate').val();
+
+
+  $("#timeStart").val(a);
+  $("#timeEnd").val(a); 
+}
+</script>
+<br>
+    <br>
+    <div id = "NewEvent">
+        <h2>Join NFGC</h2>
+        <form id = "EventForm" action='/Connections' method = "post">
+            <label for="eventName" >Event name:</label><br>
+            <input id ="eventName" type="text" required name = "eventName"><br>
+            <label for="hostName" >Host:</label><br>
+            <input id ="hostName" type="text" required name = "eventHost"><br><br>
+            
+            <label for = "eventType" >Type of Event: (pick from list)</label><br>
+            <select id = "eventType" name = "type">
+                <option value="Panel">Panels</option>
+                <option value = "Vendor">Vendors</option>
+                <option value = "Game">Game</option>
+            </select><br><br>
+            
+            <label for="PickDate">Pick Date (between Jan 30th - 31st, 2023):</label><br>
+            <input type = "date" id=" PickDate" name ='date' required  min="2023-01-30" max="2023-01-31"><br><br>
+            
+            <label for = "description">description:</label><br>
+            <input type ="text" id = "description" name="description" required minlength="10"><br>
+            
+            <label for = "Img_src">Image:</label><br>
+            <input type ="text" id = "Img_src" name="image" required ><br>
+
+            <label for="timeStart">Time start (between 9am and 7pm): </label>
+            <input type="datetime-local" id ="timeStart"  name = "startDateTime" required min="2023-01-30T09:00" max="2023-01-31T19:00"><br>
+            <label for="timeEnd">Time End (between 10am and 9pm)</label>
+            <input type="datetime-local" id ="timeEnd" name = "stopDateTime" required min="2023-01-30T10:00" max="2023-01-31T19:00"><br>
+            <label for="location">Preferred location:</label><br>
+            <input type="text" id ="location" name = "location"><br>
+            <label for = "request">Special request:</label><br>
+            <input type ="text" id = "request" name="specialReq"><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+        
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') %>
+<br>
+<div id = "EventsContent">
+    <h2>Events at NFGC</h2><br>
+    <% if (connections.length){ %>
+    <div id = "vendors">
+        <h3>Vendors</h3>
+        
+            <ul id = "vendorList">
+                <%connections.forEach(connection =>{
+                    if (connection.type === 'Vendor'){ %>
+                        <li><a href="/Connections/<%= connection.id%>"</a><%=connection.eventName%></a></li>   
+                    <%}
+                })%>   
+            </ul>
+        
+    </div>
+
+    <div id = "panels">
+        <h3>Panels</h3>
+        
+        <ul>
+            <%connections.forEach(connection =>{
+                if (connection.type === 'Panel'){ %>
+                    <li><a href="/Connections/<%= connection.id%>"><%=connection.eventName%></a></li>
+                    <%}
+                })%>
+        
+        </ul>    
+    </div>
+
+    <div id = "gaming">
+        <h3>Games and Board Game</h3>
+        <ul>
+            <%connections.forEach(connection =>{
+                if (connection.type === 'Game'){ %>
+                    <li><a href="/Connections/<%= connection.id%>"><%=connection.eventName%></a></li>
+                    <%}
+                })%>
+        </ul>
+    </div>
+    <%}
+        else{%>
+            <p>Events waiting to be added</p>
+        <%}%>
+
+    <form action="/Connections/new">
+        <input type="submit" value="Join us today!">
+    </form>
+
+</div>
+<%- include('../partials/footer.ejs') %>

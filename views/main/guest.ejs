@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+
+    
+    <div id="Homepage_content">
+       <h2>2023 Guest list</h2>
+        <p>Kinda empty here. Any suggestion?</p>
+        <div id="GuestSuggest">
+            <h1>Non Fiction Gaming Con Guest Suggest</h1>
+            <p>Want to see your favourites at NFGC? Make a suggestion!</p>
+            <form id = "guestForm">
+                <label for="name">Preferred name:</label><br>
+                <input id ="name" type="text" required><br>
+                <label for="email">Email</label><br>
+                <input id ="email" type="email" required><br>
+                <label for = "suggestion">Your guest suggestion:</label><br>
+                <input id = "suggestion" type="text"><br>
+                <label for = "GuestContact">Guest Link:</label><br>
+                <input id = "GuestContact" type="url"><br>
+                <input type="submit" value="Suggest your guest!">
+            </form>
+        </div>
+
+    </div>
+
+    
+    <%- include('../partials/footer.ejs') %>

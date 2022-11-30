@@ -1,0 +1,219 @@
+header{
+    text-align: left;
+    background-color: black;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /*position: absolute;*/
+
+}
+header img{
+    width: 180px;
+    height: 80px;
+    margin-left: 10px;
+}
+
+
+
+
+
+.navbar{
+    /*margin-top: 100px;*/
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+.navbar ul
+{
+  list-style-type: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+/*float list item to make a horizontal bar*/
+.navbar li
+{
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 2s ease-out 100ms
+}
+/*mouse hover*/
+.navbar li a:hover {
+    background-color: #07c1d2;
+}
+
+
+
+
+body{
+    background-color: aliceblue;
+    background-image: url(../Image/Gaming_Background.jpg);
+    text-align: center;
+    
+}
+
+
+
+
+footer{
+    right: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0px 0px 0px 0px;
+    padding-top: 20px;
+    /*padding-bottom: 10px;*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    float: right;
+}
+footer a {
+    color: white;
+
+}
+footer a:hover{
+    color: #07c1d2;
+}
+
+a {
+    text-decoration: none !important;
+  }
+
+
+
+
+
+
+#Homepage_content{
+    display: inline-block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+#GuestSuggest{
+    display: inline-block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+#EventsContent{
+    display: inline-block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 80px;
+    
+}
+#EventsContent li{
+    list-style-type: none
+}
+
+#EventDetails{
+    display: block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+#cafeImg{
+    width: 200px;
+    height: 130px;
+    float: right;
+    align-self: right;
+    margin: 0px 15px 15px 0px
+}
+
+#EventUpdate{
+    float: right;
+    align-self: right;
+    margin: 0px 15px 15px 0px
+}
+
+#NewEvent{
+    display: inline-block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 80px;
+    
+}
+#NewTicket{
+    display: inline-block;
+    border: 0px;
+    width: 400px;
+    height: auto;
+    background-color:#d881b6;
+    align-content: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 30px;  
+}

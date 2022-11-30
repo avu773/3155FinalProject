@@ -1,0 +1,24 @@
+mongoshell cmd:
+//switch db NBAD
+use NBAD
+
+//the random cafe day 1 insert
+db.connections.insertOne({eventName: 'The Random Cafe Day 1', eventHost: 'The RandomCo', description:'Come and grab your power up for the day!', type: 'Vendor',date: '2023-01-30', startDateTime:'2023-01-30 9:00 am', stopDateTime:'2023-01-30 5:00 pm', location: 'booth 31 - 32', image: '/Image/The_Random_cafe.jpg'})
+
+//Random cafe day 2 inset
+db.connections.insertOne({eventName: 'The Random Cafe Day 2', eventHost: 'The RandomCo', description:'Come and grab your power up for the day!', type: 'Vendor',date: '2023-01-31', startDateTime:'2023-01-31 9:00 am', stopDateTime:'2023-01-31 5:00 pm', location: 'booth 31 - 32', image: '/Image/The_Random_cafe.jpg'})
+
+//Artist Vendor
+db.connections.insertOne({eventName: 'ArtistName Vendor booth', eventHost: 'ArtistName', description:'@realArtisName on Twitter, widely known as ArtistName is here. Stop by, say hi and grab some merch!', type: 'Vendor',date: '2023-01-31', startDateTime:'2023-01-31 9:00 am', stopDateTime:'2023-01-31 5:00 pm', location: 'booth 10', image: '/Image/ArtistVendor.jpg'})
+
+//DND free play insert
+db.connections.insertOne({eventName: 'Dungeon and Dragon Free Play', eventHost: 'NFGC team', description:'Join NFGC DnD team and other strangers on a quest. What might happen? We do not know, but thats the fun', type: 'Game',date: '2023-01-30', startDateTime:'2023-01-30 10:00 am', stopDateTime:'2023-01-30 01:00 pm', location: 'Room 103', image: '/Image/DnD.jpg'})
+
+//Yugioh TCG insert
+db.connections.insertOne({eventName: 'Yugi-Oh Trading Card Game', eventHost: 'NFGC team', description:'Join and win 15 packs of BEWD 10 years celebration', type: 'Game',date: '2023-01-31', startDateTime:'2023-01-30 10:00 am', stopDateTime:'2023-01-31 01:00 pm', location: 'Room 103', image: '/Image/YGO_TCG.jpg'})
+
+//Gamming voice actor
+db.connections.insertOne({eventName: 'Gaming voice actor', eventHost: 'NFGC team', description:'Voice actor from Resident evil 11 is here!', type: 'Panel',date: '2023-01-31', startDateTime:'2023-01-30 01:00 pm', stopDateTime:'2023-01-31 02:00 pm', location: 'Room 110', image: '/Image/Game_panel.jpg'})
+
+//Game Dev panel insert
+db.connections.insertOne({eventName: 'Game Dev panel', eventHost: 'Women in Code', description:'Women in Code is here to answer your question about coding.', type: 'Panel',date: '2023-01-31', startDateTime:'2023-01-30 01:00 pm', stopDateTime:'2023-01-31 02:00 pm', location: 'Room 104', image: '/Image/REPanel.jpg'})

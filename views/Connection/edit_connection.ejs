@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs') %>
+<br>
+    <br>
+    <div id = "EventsContent">
+        <h2>Edit event NFGC</h2>
+        <form id = "EventForm" action='/Connections/<%=connection.id%>?_method=PUT' method = "POST">
+            <label for="eventName" >Event name:</label><br>
+            <input id ="eventName" type="text" required name = "eventName" value = "<%=connection.eventName%>"><br>
+            <label for="hostName" >Host:</label><br>
+            <input id ="hostName" type="text" required name = "eventHost" value = "<%=connection.eventHost%>"><br><br>
+            
+            <label for = "eventType" >Type of Event: (pick from list)</label><br>
+            <select id = "eventType" name = "type">
+                <option value = '<%= connection.type%>' selected><%=connection.type%></option>
+                <option value="Panel">Panels</option>
+                <option value = "Vendor">Vendors</option>
+                <option value = "Game">Game</option>
+            </select><br><br>
+            
+            <label for="PickDate">Pick Date (between Jan 30th - 31st, 2023):</label><br>
+            <input type = "date" id=" PickDate" name ='date' required  min="2023-01-30" max="2023-01-31" value = '<%= connection.Date%>'><br><br>
+            
+            <label for = "description">description:</label><br>
+            <input type ="text" id = "description" name="description" required minlength="10" value = '<%= connection.description%>'><br>
+            
+            <label for = "Img_src">Image:</label><br>
+            <input type ="text" id = "Img_src" name="image" required value = '<%= connection.image%>'><br>
+
+            <label for="timeStart">Time start (between 9am and 7pm): </label>
+            <input type="datetime-local" id ="timeStart"  name = "startDateTime" required min="2023-01-30T09:00" max="2023-01-31T19:00" value = '<%= connection.startDateTime%>'><br>
+            <label for="timeEnd">Time End (between 10am and 9pm)</label>
+            <input type="datetime-local" id ="timeEnd" name = "stopDateTime" required min="2023-01-30T10:00" max="2023-01-31T19:00" value = '<%= connection.stopDateTime%>'><br>
+            <label for="location">Preferred location:</label><br>
+            <input type="text" id ="location" name = "location" required value = "<%=connection.location%>"><br>
+            <label for = "request">Special request:</label><br>
+            <input type ="text" id = "request" name="specialReq" value = "<%=connection.specialReq%>"><br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+        
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,23 @@
+<%- include('../partials/header.ejs') %>
+<br>
+<br>
+<div id = "EventDetails">
+
+    <h2>Event details</h2>
+    <div id = "EventUpdate">
+        <form>
+            <button type = 'submit' formaction="/Connections/<%=connection.id%>/edit" formmethod="get" >Update Event</button>
+            <button type = 'submit' formaction="/Connections/<%=connection.id%>?_method=DELETE" formmethod="post">Delete Event</button>     
+        </form>
+    </div>
+    
+   
+    <h3><%=connection.eventName%></h3>
+    <img id ="cafeImg" src='<%=connection.image%>' alt="Img"><br><br>
+    <p><b>Host: </b><%= connection.eventHost%> </p>
+    <p><b>Time: </b> <%=connection.startDateTime%>-<%=connection.stopDateTime%> <%=connection.Date%></p>
+    <p><b>Location: </b><%=connection.location%></p>
+    <p><b>Description: </b><%=connection.description%></p>
+    
+</div>
+<%- include('../partials/footer.ejs') %>
